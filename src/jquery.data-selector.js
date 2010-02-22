@@ -1,6 +1,6 @@
-/**
- * Data Selector 1.0
- * August 27, 2009
+/*!
+ * Data Selector [VERSION]
+ * [DATE]
  * Corey Hart http://www.codenothing.com
  *
  * Inspiration from Pim Jager @ http://jqueryplugins.blogspot.com/search/label/jQuery%20plugin
@@ -78,9 +78,9 @@
 			parseQuery(params[3]);
 
 		// Grab bottom most level data
-		var data;
-		for (var i in name)
-			if ((data = data === undefined ? $(elem).data(name[i]) : data[name[i]]) === undefined)
+		var data, i;
+		for (i in name)
+			if (name.hasOwnProperty(i) && (data = data === undefined ? $(elem).data(name[i]) : data[name[i]]) === undefined)
 				return false;
 
 		// No comparrison passed, just looking for existance

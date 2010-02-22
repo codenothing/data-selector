@@ -1,6 +1,6 @@
 /**
- * Data Selector 1.0 - Test Suite
- * August 27, 2009
+ * Data Selector [VERSION] - Test Suite
+ * [DATE]
  * Corey Hart http://www.codenothing.com
  *
  * Inspiration from Pim Jager @ http://jqueryplugins.blogspot.com/search/label/jQuery%20plugin
