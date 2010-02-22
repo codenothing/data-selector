@@ -1,0 +1,76 @@
+/**
+ * Data Selector 1.0 - CSS Temp
+ * August 27, 2009
+ * Corey Hart http://www.codenothing.com
+ *
+ * Inspiration from Pim Jager @ http://jqueryplugins.blogspot.com/search/label/jQuery%20plugin
+ */ 
+
+body {
+	font-size: 10pt;
+}
+
+li {
+	padding: 2px 0;
+}
+
+h3 {
+	padding: 0;
+	margin: 0 0 10px 0;
+	font-size: 14pt;
+}
+
+code {
+	font-size: 8pt;
+	color: purple;
+}
+
+code span {
+	color: red;
+}
+
+pre {
+	font-size: 8pt;
+	background-color: white;
+	border: 1px dashed #989898;
+	padding: 2px;
+	width: 300px;
+	height: 300px;
+	overflow: auto;
+}
+
+p {
+	width: 600px;
+	font-size: 9pt;
+}
+
+input[type=button] {
+	padding: 0 2px;
+}
+
+#main td.info {
+	background-color: #f7f7f7;
+	border: 2px solid #d1d1d1;
+	padding: 20px;
+}
+
+#main td.seperator {
+	width: 25px;
+}
+
+#test-examples {
+	margin: 0 0 0 20px;
+	padding: 0;
+	width: 350px;
+}
+
+#test-examples li {
+	margin: 15px 0;
+	padding: 0;
+}
+
+.focus {
+	color: red;
+	font-weight: bold;
+	font-size: 12pt;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Data Selector Testing</title>
+	<script type='text/javascript' src='http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js'></script>
+	<script type='text/javascript' src='jquery-1.3.2.js'></script>
+	<script type='text/javascript' src='jquery.data-selector.js'></script>
+	<script type='text/javascript' src='array.js'></script>
+	<script type='text/javascript' src='test.js'></script>
+<style type='text/css'>
+body {
+	font-size: 10pt;
+}
+
+li {
+	padding: 2px 0;
+}
+
+.focus {
+	color: red;
+	font-weight: bold;
+	font-size: 12pt;
+}
+
+#results tr td {
+	text-align: center;
+	background-color: white;
+	padding: 2px 8px;
+}
+</style>
+</head>
+<body>
+
+<!--
+Data Selector 1.0 - Test Suite
+August 27, 2009
+Corey Hart http://www.codenothing.com
+
+Inspiration from Pim Jager @ http://jqueryplugins.blogspot.com/search/label/jQuery%20plugin
+-->
+
+<h1>Data Selector 1.0 Test Suite</h1>
+
+<p style='width: 600px; font-size: 10pt;'>
+Below shows the results of tests run on the data selector. Profiling
+uses <a href='http://getfirebug.com/'>firebug's</a> profile method to
+track function calls. If you pop open your console, I've also logged 
+the time it takes each selection to run.
+</p>
+
+<!-- Not important to show, just needed for testing -->
+<ul id='list' style='display: none;'>
+	<li>Option 0</li>
+	<li>Option 1</li>
+	<li>Option 2</li>
+	<li>Option 3</li>
+</ul>
+
+<table id='results' bgcolor='#989898' cellspacing='2' cellpadding='3'>
+<tr bgcolor='#d9d9d9'>
+	<th>Testing</th>
+	<th>Should Match</th>
+	<th>Matched</th>
+	<th>Result</th>
+	<th>Profile</th>
+</tr>
+</table>
+
+<p>
+<a href='index.html'>Back to index.html</a>
+</p>
+</body>
+</html>
