@@ -1,11 +1,11 @@
-/*!
+/*
  * Data Selector [VERSION]
  * [DATE]
  * Corey Hart http://www.codenothing.com
  *
  * Inspiration from Pim Jager @ http://jqueryplugins.blogspot.com/search/label/jQuery%20plugin
  * Credit RegExp trick to James Padolsey @ http://james.padolsey.com/javascript/extending-jquerys-selector-capabilities/
- */ 
-(function(j){var m,c,a,b,f,g,h={},k={};function o(e){f=e;if(h[f]){c=h[f].name;a=h[f].value;b=h[f].condition;g=h[f].eqIndex;return true}g=e.indexOf("=");if(g!==-1){c=e.substring(0,g);a=e.substring(g+1)||null}else{c=e;a=null}b=c.charAt(c.length-1);if(b=="!"||b=="^"||b=="$"||b=="*"||b=="<"||b==">"||b=="~")c=c.substring(0,c.length-1);else if(b=="]"){b=/\[(.*?)\]$/.exec(c)[1];c=c.replace(/\[(.*?)\]$/,"")}if(a&&(b=="<"||b==">")&&a.charAt(0)==="="){a=a.substring(1);b+="="}else if(b=="~")a=new RegExp(a.substr(1,
-a.lastIndexOf("/")-1),a.split("/").pop());c=c.split(".");h[f]={name:c,value:a,condition:b,eqIndex:g}}j.expr[":"].data=function(e,n,i,p){if(e===m||!i[3]||i[3]=="")return false;else f!==i[3]&&o(i[3]);var d,l;for(l in c)if(c.hasOwnProperty(l)&&(d=d===m?j(e).data(c[l]):d[c[l]])===m)return false;if(g===-1)return true;switch(b){case "!":return d.toString()!==a;case "^":return d.toString().indexOf(a)==0;case "$":return d.toString().substr(d.length-a.length)===a;case "*":return d.toString().indexOf(a)!=-1;
-case ">":return d>a;case ">=":return d>=a;case "<":return d<a;case "<=":return d<=a;case "~":return a.test(d.toString());default:return k[b]?k[b].call(e,d,a,n,i,p):d.toString()===a}};j.dataSelector=function(e,n){if(typeof e!=="object")k[e]=n;else j.extend(k,e||{})}})(jQuery);
+ */
+(function(i,m){function p(e){f=e;if(h[f]){c=h[f].name;a=h[f].value;d=h[f].condition;g=h[f].eqIndex;return true}g=e.indexOf("=");if(g>-1){c=e.substr(0,g);a=e.substr(g+1)||null}else{c=e;a=null}d=c.charAt(c.length-1);if(q[d]===true)c=c.substr(0,c.length-1);else if(d==="]"){d=o.exec(c)[1];c=c.replace(o,"")}if(a&&(d==="<"||d===">")&&a.charAt(0)==="="){a=a.substr(1);d+="="}else if(d==="~")a=new RegExp(a.substr(1,a.lastIndexOf("/")-1),a.split("/").pop());else if(a&&a.substr(0,2)==="=="){d="===";a=a.substr(2)}c=
+c.split(".");h[f]={name:c,value:a,condition:d,eqIndex:g}}var c,a,d,f,g,h={},k={},o=/\[(.*?)\]$/,q={$:true,"!":true,"^":true,"*":true,"<":true,">":true,"~":true};i.expr[":"].data=function(e,l,j,r){if(e===m||!j[3]||j[3]==="")return false;else f!==j[3]&&p(j[3]);for(var n=-1,s=c.length,b;++n<s;)if((b=b===m?i(e).data(c[n]):b[c[n]])===m||b===null)return false;if(g===-1)return true;switch(d){case "!":return b.toString()!==a;case "^":return b.toString().indexOf(a)===0;case "$":return b.toString().substr(b.length-
+a.length)===a;case "*":return b.toString().indexOf(a)!==-1;case ">":return b>a;case ">=":return b>=a;case "<":return b<a;case "<=":return b<=a;case "===":return b===(a==="false"?false:true);case "~":return a.test(b.toString());default:return k[d]?k[d].call(e,b,a,l,j,r):b&&b.toString()===a}};i.dataSelector=function(e,l){if(i.isFunction(l))k[e]=l;else i.extend(k,e||{})}})(jQuery);

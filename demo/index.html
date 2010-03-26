@@ -7,60 +7,7 @@
 	<link rel='stylesheet' type='text/css' href='styles.css' />
 	<script type='text/javascript' src='../jquery/jquery-1.4.2.js'></script>
 	<script type='text/javascript' src='../src/jquery.data-selector.js'></script>
-<script type='text/javascript'>
-// Attach data to list
-$(function(){
-	var tree = {
-		lvl1: {
-			lvl2: {
-				fin: 22
-			}
-		}
-	};
-
-	// Add Data
-	$('#list li:odd').data('odd', true);
-	$('#list li:even').data('even', true);
-	$('#list li:eq(1)').data('noval', true);
-	$('#list li:eq(2)').data('singleval', 'testcase').data('falseval', false);
-	$('#list li:eq(3)').data('tree', tree);
-
-	// Add special comparison function 
-	$.dataSelector('typeof', function(data, value){
-		return typeof data === value;
-	});
-});
-
-function clearFocus(){
-	$('#list li.focus').removeClass('focus');
-}
-
-function runQuery(){
-	var query = $('input[name=query]').val();
-	clearFocus();
-	if (query)
-		$('#list li:data('+query+')').addClass('focus');
-}
-
-function testClick(str){
-	$('input[name=query]').val(str);
-	runQuery();
-}
-
-function profile(){
-	if (! console){
-		alert("You don't have firebug installed");
-	}else{
-		var query = $('input[name=query]').val();
-		clearFocus();
-		if (! query)
-			return false;
-		console.profile(query);
-		$('#list li:data('+query+')').addClass('focus');
-		console.profileEnd(query);
-	}
-}
-</script>
+	<script type='text/javascript' src='js.js'></script>
 </head>
 <body>
 
@@ -103,9 +50,9 @@ so developers can test their special comparison functions as they want.
 				$(<span>'ul#list li:data('</span>+str+<span>')'</span>)
 			</code><br>
 			<input type='text' name='query' value='' style='width: 250px;' /><br>
-			<input type='button' name='runQuery' value='Run Selector' onClick="runQuery();" />
-			<input type='button' name='clearQuery' value='Clear Focus' onClick="clearFocus();" />
-			<input type='button' name='profile' value='Profile' onClick="profile();" />
+			<input type='button' name='runQuery' value='Run Selector' />
+			<input type='button' name='clearFocus' value='Clear Focus' />
+			<input type='button' name='profile' value='Profile' />
 		</td>
 		<td class='seperator'></td>
 		<td class='info'>

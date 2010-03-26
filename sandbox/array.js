@@ -21,8 +21,8 @@ var testarr = [
 	[ 'noval=true', [1] ],
 	[ 'noval=14', [] ],
 	[ 'noval=1', [] ],
-	[ 'falseval=false', [2] ],
-	[ 'falseval=0', [] ],
+	[ 'falseval===false', [2] ],
+	[ 'falseval===0', [] ],
 	// String Testing (Non-regex)
 	[ 'singleval^=test', [2] ],
 	[ 'singleval$=case', [2] ],
@@ -49,5 +49,5 @@ var testarr = [
 
 
 	// Last element Sanity Check
-	[ 'Sanity Check', [] ],
+	[ 'Sanity Check', [] ]
 ];
