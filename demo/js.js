@@ -1,3 +1,9 @@
+/*
+ * Data Selector [VERSION] - Demo Javascript
+ * [DATE]
+ * Corey Hart http://www.codenothing.com
+ */ 
+
 function clearFocus(){
 	$('#list li.focus').removeClass('focus');
 }
@@ -5,8 +11,9 @@ function clearFocus(){
 function runQuery(){
 	var query = $('input[name=query]').val();
 	clearFocus();
-	if (query)
+	if ( query ) {
 		$('#list li:data('+query+')').addClass('focus');
+	}
 }
 
 function testClick(str){
@@ -20,15 +27,16 @@ function profile(){
 	}else{
 		var query = $('input[name=query]').val();
 		clearFocus();
-		if (! query)
+		if (! query) {
 			return false;
+		}
 		console.profile(query);
 		$('#list li:data('+query+')').addClass('focus');
 		console.profileEnd(query);
 	}
 }
 
-$(function(){
+jQuery(function( $ ){
 	var tree = {
 		lvl1: {
 			lvl2: {

@@ -1,11 +1,8 @@
-/*!
+/*
  * Data Selector [VERSION]
  * [DATE]
  * Corey Hart http://www.codenothing.com
- *
- * Inspiration from Pim Jager @ http://jqueryplugins.blogspot.com/search/label/jQuery%20plugin
- * Credit RegExp trick to James Padolsey @ http://james.padolsey.com/javascript/extending-jquerys-selector-capabilities/
- */ 
+ */
 (function( $, undefined ){
 
 	// Globals

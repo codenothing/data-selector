@@ -1,9 +1,7 @@
-/**
+/*
  * Data Selector [VERSION] - Test Suite
  * [DATE]
  * Corey Hart http://www.codenothing.com
- *
- * Inspiration from Pim Jager @ http://jqueryplugins.blogspot.com/search/label/jQuery%20plugin
  */ 
 (function( $, window, testarr ){
 
