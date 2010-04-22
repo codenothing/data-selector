@@ -19,8 +19,9 @@ Corey Hart http://www.codenothing.com
 
 
 <p>
-Data Selector, inspried by <a href='http://jqueryplugins.blogspot.com/search/label/jQuery%20plugin'>Pim Jager's data selector</a>, 
-provides a filter for values stored using jQuery's <a href='http://docs.jquery.com/Internals/jQuery.data'>.data()</a> method.
+Data Selector, originally covered by <a href='http://james.padolsey.com/javascript/extending-jquerys-selector-capabilities/'>James Padolsey</a>,
+and later extended by <a href='http://jqueryplugins.blogspot.com/search/label/jQuery%20plugin'>Pim Jager's data selector</a>, 
+provides an even more enhanced filter for values stored using jQuery's <a href='http://docs.jquery.com/Internals/jQuery.data'>.data()</a> method.
 It uses comparison operators and methods to match the elements specified, as well as the ability to 
 <a href='../docs/#dataSelector'>add special comparison functions</a>.
 </p>
@@ -43,7 +44,7 @@ so developers can test their special comparison functions as they want.
 			</ul>
 			<br><br>
 			<code>
-				$(<span>'ul#list li:data('</span>+str+<span>')'</span>)
+				$list.filter(<span>':data(<span></span>)'</span>)
 			</code><br>
 			<input type='text' name='query' value='' style='width: 250px;' /><br>
 			<input type='button' name='runQuery' value='Run Selector' />
@@ -55,29 +56,29 @@ so developers can test their special comparison functions as they want.
 			<h3>Examples</h3>
 			<ul id='test-examples'>
 				<li>
-					<a href="javascript:testClick('even')">:data(even)</a> <i>or </i>
-					<a href="javascript:testClick('odd')">:data(odd)</a><br>
+					<a data-test='even' href='#'>:data(even)</a> <i>or </i>
+					<a data-test='odd' href='#'>:data(odd)</a><br>
 					Check to just see if data exists for the given key
 				</li>
 				<li>
-					<a href="javascript:testClick('noval=true')">:data(noval=true)</a><br>
+					<a data-test='noval=true' href='#'>:data(noval=true)</a><br>
 					Use direct comparison matching
 				</li>
 				<li>
-					<a href="javascript:testClick('singleval^=test')">:data(singleval^=test)</a> <i>or</i>
-					<a href="javascript:testClick('singleval$=case')">:data(singleval$=case)</a> <br>
+					<a data-test='singleval^=test' href='#'>:data(singleval^=test)</a> <i>or</i>
+					<a data-test='singleval$=case' href='#'>:data(singleval$=case)</a> <br>
 					Use pattern matching for fragment comparison
 				</li>
 				<li>
-					<a href="javascript:testClick('tree.lvl1.lvl2.fin>=21')">:data(tree.lvl1.lvl2.fin&gt;=21)</a><br>
+					<a data-test='tree.lvl1.lvl2.fin>=21' href='#'>:data(tree.lvl1.lvl2.fin&gt;=21)</a><br>
 					Search through multiple levels of stored objects
 				</li>
 				<li>
-					<a href="javascript:testClick('singleval~=/^[A-Z]+$/i')">:data(singleval~=/^[A-Z]+$/i)</a><br>
+					<a data-test='singleval~=/^[A-Z]+$/i' href='#'>:data(singleval~=/^[A-Z]+$/i)</a><br>
 					Use regex matching for string searches
 				</li>
 				<li>
-					<a href="javascript:testClick('falseval[typeof]=boolean')">:data(falseval[typeof]=boolean)</a><br>
+					<a data-test='falseval[typeof]=boolean' href='#'>:data(falseval[typeof]=boolean)</a><br>
 					Add your own special comparrison functions for testing data
 				</li>
 			</ul>

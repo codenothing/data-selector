@@ -20,4 +20,4 @@ Credits
 
 [James Padolsey](http://james.padolsey.com/javascript/extending-jquerys-selector-capabilities/) - Original Idea and Regex Trick
 
-[Pim Jager](http://jqueryplugins.blogspot.com/search/label/jQuery%20plugin) - Created original data selector
+[Pim Jager](http://jqueryplugins.blogspot.com/search/label/jQuery%20plugin) - Extended James idea into a data selector plugin

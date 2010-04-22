@@ -2,11 +2,10 @@
 <html>
 <head>
 	<title>Data Selector [VERSION] Test Suite</title>
-	<script type='text/javascript' src='http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js'></script>
 	<script type='text/javascript' src='../jquery/jquery-1.4.2.js'></script>
 	<script type='text/javascript' src='../src/jquery.data-selector.js'></script>
-	<script type='text/javascript' src='array.js'></script>
-	<script type='text/javascript' src='test.js'></script>
+	<script type='text/javascript' src='Sandbox.js'></script>
+	<script type='text/javascript' src='Enviorment.js'></script>
 <style type='text/css'>
 body {
 	font-size: 10pt;
@@ -16,10 +15,8 @@ li {
 	padding: 2px 0;
 }
 
-.focus {
-	color: red;
-	font-weight: bold;
-	font-size: 12pt;
+#enviorment {
+	display: none;
 }
 
 #results tr td {
@@ -32,40 +29,33 @@ li {
 <body>
 
 <!--
-Data Selector [VERSION] - Test Suite
+Data Selector [VERSION]
 [DATE]
 Corey Hart http://www.codenothing.com
 -->
 
 <h1>Data Selector [VERSION] Test Suite</h1>
 
-<p style='width: 600px; font-size: 10pt;'>
-Below shows the results of tests run on the data selector. Profiling
-uses <a href='http://getfirebug.com/'>firebug's</a> profile method to
-track function calls. If you pop open your console, I've also logged 
-the time it takes each selection to run.
-</p>
-
 <!-- Not important to show, just needed for testing -->
-<ul id='list' style='display: none;'>
-	<li>Option 0</li>
-	<li>Option 1</li>
-	<li>Option 2</li>
-	<li>Option 3</li>
-</ul>
+<div id='enviorment'>
+	<div>Enviorment Div 0</div>
+	<div>Enviorment Div 1</div>
+	<div>Enviorment Div 2</div>
+	<div>Enviorment Div 3</div>
+</div>
 
 <table id='results' bgcolor='#989898' cellspacing='2' cellpadding='3'>
 <tr bgcolor='#d9d9d9'>
-	<th>Testing</th>
-	<th>Should Match</th>
-	<th>Matched</th>
+	<th></th>
+	<th>Filter</th>
+	<th>Expected Match</th>
+	<th>Actual Match</th>
 	<th>Result</th>
-	<th>Profile</th>
 </tr>
 </table>
 
 <p>
-<a href='../demo/'>Back to index.html</a>
+<a href='../demo/'>Back to Demo</a>
 </p>
 </body>
 </html>

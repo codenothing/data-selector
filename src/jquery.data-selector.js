@@ -80,7 +80,7 @@
 	}
 
 	$.expr[':'].data = function( elem, index, params, group ) {
-		if ( elem === undefined || ! params[3] || params[3] === '' ) {
+		if ( elem === undefined || ! params[3] || params[3] == '' ) {
 			return false;
 		}
 		else if ( original !== params[3] ) {
@@ -89,7 +89,7 @@
 
 		// Grab bottom most level data
 		for ( var i = -1, l = name.length, data; ++i < l; ) {
-			if ( ( data = data === undefined ? $(elem).data( name[i] ) : data[ name[i] ] ) === undefined || data === null ) {
+			if ( ( data = data === undefined ? $.data( elem, name[i] ) : data[ name[i] ] ) === undefined || data === null ) {
 				return false;
 			}
 		}
