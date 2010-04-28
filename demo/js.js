@@ -42,12 +42,19 @@ jQuery(function( $ ){
 		return typeof data == value;
 	});
 
+	// Track enter key to emulate form submission on enter
+	$query.keyup(function( event ) {
+		if ( event.keyCode === 13 ) {
+			$run.click();
+		}
+	});
+
 	// Running the query
 	$run.click(function(){
 		$clear.click();
 
 		var query = $query.val();
-		if ( query ) {
+		if ( query && query !== '' ) {
 			$codeStr.html( query )
 			$list.filter( ':data(' + query + ')' ).addClass( 'focus' );
 		}
@@ -76,5 +83,6 @@ jQuery(function( $ ){
 	$('#test-examples').delegate( 'a', 'click', function(){
 		$query.val( this.getAttribute('data-test') );
 		$run.click();
+		return false;
 	});
 });
