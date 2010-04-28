@@ -39,7 +39,7 @@
 			value = null;
 		}
 
-		// Store condition (not required) for comparrison
+		// Store condition (not required) for comparison
 		condition = name.charAt( name.length - 1 );
 
 		if ( BasicConditions[ condition ] === true ) {
@@ -94,7 +94,7 @@
 			}
 		}
 
-		// No comparrison passed, just looking for existance (which was found at this point)
+		// No comparison passed, just looking for existence (which was found at this point)
 		if ( eqIndex === -1 ) {
 			return true;
 		}

@@ -4,7 +4,7 @@
 Filter elements based on the data attached to them.
 
 
-Bowser Support
+Browser Support
 --------------
 
 **IE** 6, 7, 8  
