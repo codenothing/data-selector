@@ -1,6 +1,6 @@
 /*
- * Data Selector [VERSION]
- * [DATE]
+ * Data Selector 1.1
+ * April 27, 2010
  * Corey Hart http://www.codenothing.com
  */
 var Sandbox = {

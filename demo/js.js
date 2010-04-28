@@ -1,6 +1,6 @@
 /*
- * Data Selector [VERSION] - Demo Javascript
- * [DATE]
+ * Data Selector 1.1 - Demo Javascript
+ * April 27, 2010
  * Corey Hart http://www.codenothing.com
  */ 
 jQuery(function( $ ){
