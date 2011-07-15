@@ -22,8 +22,8 @@ jQuery(function( $ ) {
 	// Add Data
 	$elems.filter(':odd').data('odd', true);
 	$elems.filter(':even').data('even', true);
-	$elems.filter(':eq(1)').data('noval', true);
-	$elems.filter(':eq(2)').data('singleval', 'testcase').data('falseval', false);
+	$elems.filter(':eq(1)').data('noval', true).data('oneval', 1).data('thousandval', 1000);
+	$elems.filter(':eq(2)').data('singleval', 'testcase').data('falseval', false).data('zeroval', 0);
 	$elems.filter(':eq(3)').data('tree', {
 		lvl1: {
 			lvl2: {

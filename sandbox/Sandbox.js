@@ -16,6 +16,10 @@ var Sandbox = {
 		// Even odd testing
 		[ 'odd', [1, 3] ],
 		[ 'even', [0, 2] ],
+		// Number Testing
+		[ 'zeroval', [2] ],
+		[ 'oneval', [1] ],
+		[ 'thousandval', [1] ],
 		// Boolean testing
 		[ 'noval=true', [1] ],
 		[ 'noval=14', [] ],

@@ -120,7 +120,8 @@
 			case '~': return value.test( data.toString() );
 			// Defaults to either special user defined function, or simple '=' comparison
 			default: return special[ condition ] ? 
-				special[ condition ].call( elem, data, value, index, params, group ) : ( data && data.toString() === value );
+				special[ condition ].call( elem, data, value, index, params, group ) :
+				( data !== undefined && data !== null && data.toString() === value );
 		}
 	};
 
